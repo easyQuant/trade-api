@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>雪球 · Blankj's Glory</title>
+        <title>测试HTTP接口 · Blankj's Glory</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -47,8 +47,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="../Broker/" />
     
-    <link rel="prev" href="bigQuant.html" />
+    
+    <link rel="prev" href="config.html" />
     
 
     </head>
@@ -117,9 +119,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../Account/config.html">
+        <li class="chapter " data-level="1.2.2" data-path="config.html">
             
-                <a href="../Account/config.html">
+                <a href="config.html">
             
                     
                     资金账号配置
@@ -130,9 +132,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="../Account/test_api.html">
+        <li class="chapter active" data-level="1.2.3" data-path="test_api.html">
             
-                <a href="../Account/test_api.html">
+                <a href="test_api.html">
             
                     
                     测试HTTP接口
@@ -194,9 +196,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="joinQuant-client.html">
+        <li class="chapter " data-level="1.3.1" data-path="../Quant/joinQuant-client.html">
             
-                <a href="joinQuant-client.html">
+                <a href="../Quant/joinQuant-client.html">
             
                     
                     聚宽本地客户端
@@ -207,9 +209,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="joinQuant.html">
+        <li class="chapter " data-level="1.3.2" data-path="../Quant/joinQuant.html">
             
-                <a href="joinQuant.html">
+                <a href="../Quant/joinQuant.html">
             
                     
                     聚宽
@@ -220,9 +222,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="riceQuant.html">
+        <li class="chapter " data-level="1.3.3" data-path="../Quant/riceQuant.html">
             
-                <a href="riceQuant.html">
+                <a href="../Quant/riceQuant.html">
             
                     
                     米筐
@@ -233,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="uqer.html">
+        <li class="chapter " data-level="1.3.4" data-path="../Quant/uqer.html">
             
-                <a href="uqer.html">
+                <a href="../Quant/uqer.html">
             
                     
                     优矿
@@ -246,9 +248,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.5" data-path="bigQuant.html">
+        <li class="chapter " data-level="1.3.5" data-path="../Quant/bigQuant.html">
             
-                <a href="bigQuant.html">
+                <a href="../Quant/bigQuant.html">
             
                     
                     BigQuant
@@ -259,9 +261,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.6" data-path="xueqiu.html">
+        <li class="chapter " data-level="1.3.6" data-path="../Quant/xueqiu.html">
             
-                <a href="xueqiu.html">
+                <a href="../Quant/xueqiu.html">
             
                     
                     雪球
@@ -307,7 +309,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >雪球</a>
+        <a href=".." >测试HTTP接口</a>
     </h1>
 </div>
 
@@ -322,8 +324,17 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x96EA;&#x7403;">&#x96EA;&#x7403;</h1>
+                                <h1 id="&#x6D4B;&#x8BD5;http&#x63A5;&#x53E3;">&#x6D4B;&#x8BD5;HTTP&#x63A5;&#x53E3;</h1>
+<h5 id="&#x5728;python&#x4EE3;&#x7801;&#x4E2D;&#x8C03;&#x7528;&#x672C;&#x5730;http-api-&#x5B9E;&#x73B0;&#x5B9E;&#x76D8;">&#x5728;python&#x4EE3;&#x7801;&#x4E2D;&#x8C03;&#x7528;&#x672C;&#x5730;http api &#x5B9E;&#x73B0;&#x5B9E;&#x76D8;</h5>
+<pre><code>## &#x83B7;&#x53D6;&#x6301;&#x4ED3;&#x4FE1;&#x606F;
+import requests
+REAL_URL = &apos;http://127.0.0.1:3001&apos;
 
+r = requests.get(REAL_URL + &apos;/api/position&apos;)
+
+## &#x6301;&#x4ED3;&#x4FE1;&#x606F;
+print(r.json()[&apos;data&apos;])
+</code></pre>
                                 
                                 </section>
                             
@@ -350,10 +361,14 @@
 
             
                 
-                <a href="bigQuant.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: BigQuant">
+                <a href="config.html" class="navigation navigation-prev " aria-label="Previous page: 资金账号配置">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="../Broker/" class="navigation navigation-next " aria-label="Next page: 支持券商">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -362,7 +377,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"雪球","level":"1.3.6","depth":2,"previous":{"title":"BigQuant","level":"1.3.5","depth":2,"path":"Quant/bigQuant.md","ref":"Quant/bigQuant.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Blankj","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Blankj's Glory","language":"zh-hans","gitbook":"3.2.3","description":"select * from learn"},"file":{"path":"Quant/xueqiu.md","mtime":"2019-08-30T03:42:07.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-17T14:18:37.281Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"测试HTTP接口","level":"1.2.3","depth":2,"next":{"title":"支持券商","level":"1.2.4","depth":2,"path":"Broker/index.md","ref":"Broker/index.md","articles":[{"title":"中泰证券","level":"1.2.4.1","depth":3,"path":"Broker/zhongtai.md","ref":"Broker/zhongtai.md","articles":[]}]},"previous":{"title":"\b资金账号配置","level":"1.2.2","depth":2,"path":"Account/config.md","ref":"Account/config.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Blankj","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Blankj's Glory","language":"zh-hans","gitbook":"3.2.3","description":"select * from learn"},"file":{"path":"Account/test_api.md","mtime":"2019-09-17T14:22:18.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-17T14:18:37.281Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
