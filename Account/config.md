@@ -13,17 +13,17 @@ zt-trade账号相关可以加qq群 123456 咨询
 let brokerService = require('./common').brokerService
 
 // 2. 远程校验zt-trade权限
-let info = await brokerService('zhongtai', 'check', {
+let info = brokerService('zhongtai', 'check', {
     account: 'zt-trade的账号',
     password: 'zt-trade的密码',
     brokerAccount: '对应的资金账号' 
 })
 
 // 3. 身份校验没问题后 初始化系统
-await brokerService('zhongtai', 'init')
+brokerService('zhongtai', 'init')
 
 // 4. 执行资金账号登录操作
-await brokerService('zhongtai', 'login', {
+brokerService('zhongtai', 'login', {
     account: '券商资金账号',
     password: '券商资金密码'
 })
