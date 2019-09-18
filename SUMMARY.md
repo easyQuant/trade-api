@@ -4,8 +4,7 @@
 * 入门
     * [安装](Install/Index.md)
     * [资金账号配置](Account/config.md)
-    * [测试HTTP接口](Account/test_api.md)
-    * [交易API](Account/api.md)
+    * [交易API](Account/test_api.md)
     * [安全性](Account/safety.md)
     * [支持券商](Broker/index.md)
         * [中泰证券](Broker/zhongtai.md)
