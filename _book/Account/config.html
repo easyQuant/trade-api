@@ -195,103 +195,6 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" >
-            
-                <span>
-            
-                    
-                    对接量化平台模拟盘下单
-            
-                </span>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.3.1" data-path="../Quant/joinQuant-client.html">
-            
-                <a href="../Quant/joinQuant-client.html">
-            
-                    
-                    聚宽本地客户端
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.2" data-path="../Quant/joinQuant.html">
-            
-                <a href="../Quant/joinQuant.html">
-            
-                    
-                    聚宽
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.3" data-path="../Quant/riceQuant.html">
-            
-                <a href="../Quant/riceQuant.html">
-            
-                    
-                    米筐
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.4" data-path="../Quant/uqer.html">
-            
-                <a href="../Quant/uqer.html">
-            
-                    
-                    优矿
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.5" data-path="../Quant/bigQuant.html">
-            
-                <a href="../Quant/bigQuant.html">
-            
-                    
-                    BigQuant
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.6" data-path="../Quant/xueqiu.html">
-            
-                <a href="../Quant/xueqiu.html">
-            
-                    
-                    雪球
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
 
     
 
@@ -339,40 +242,19 @@
                                 
                                 <h1 id="&#x8D44;&#x91D1;&#x8D26;&#x53F7;&#x914D;&#x7F6E;">&#x8D44;&#x91D1;&#x8D26;&#x53F7;&#x914D;&#x7F6E;</h1>
 <p>&#x73AF;&#x5883;&#x914D;&#x7F6E;&#x597D;&#x4E4B;&#x540E; &#x9700;&#x8981;&#x4F7F;&#x7528;zt-trade&#x5206;&#x914D;&#x7684;&#x8D26;&#x53F7;&#x548C;&#x5BC6;&#x7801;&#x8FDB;&#x884C;&#x8EAB;&#x4EFD;&#x6821;&#x9A8C; &#x4EE5;&#x6307;&#x5B9A;&#x5BF9;&#x5E94;&#x7684;&#x8D44;&#x91D1;&#x8D26;&#x53F7;&#x8FDB;&#x884C;&#x4EA4;&#x6613;</p>
-<p>zt-trade&#x8D26;&#x53F7;&#x76F8;&#x5173;&#x53EF;&#x4EE5;&#x52A0;qq&#x7FA4; 123456 &#x54A8;&#x8BE2;</p>
+<p>zt-trade&#x8D26;&#x53F7;&#x76F8;&#x5173;&#x53EF;&#x4EE5;&#x52A0;qq&#x7FA4; 273896202 &#x54A8;&#x8BE2;</p>
 <h5 id="1-&#x8D26;&#x53F7;&#x6821;&#x9A8C;">1. &#x8D26;&#x53F7;&#x6821;&#x9A8C;</h5>
-<p>&#x5728;zt-trade/server.js&#x4E0B;&#x8F93;&#x5165;&#x7CFB;&#x7EDF;&#x548C;&#x8D44;&#x91D1;&#x8D26;&#x53F7;</p>
-<pre><code>// 1. &#x5F15;&#x5165;&#x5B9E;&#x76D8;&#x51FD;&#x6570;
-let brokerService = require(&apos;./common&apos;).brokerService
-
-// 2. &#x521D;&#x59CB;&#x5316;&#x7CFB;&#x7EDF;
-brokerService(&apos;zhongtai&apos;, &apos;init&apos;, null, async (res) =&gt; {
-
-    // 3. &#x8FDC;&#x7A0B;&#x6821;&#x9A8C;zt-trade&#x6743;&#x9650;
-    let info = await brokerService(&apos;zhongtai&apos;, &apos;check&apos;, {
-        account: &apos;zttrade1&apos;,
-        password: &apos;zttrade1&apos;,
-        brokerAccount: &apos;123456&apos; 
-    })
-
-    console.log(&apos;info =&gt; &apos;, await info)
-
-    if (info.data.status) {
-
-        // 4. &#x8FDB;&#x7A0B;&#x542F;&#x52A8;&#x5B8C;&#x6210;&#x5F00;&#x59CB;&#x767B;&#x5F55;
-        // &#x8F93;&#x5165;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;
-        // &#x8D44;&#x91D1;&#x8D26;&#x53F7;
-        // &#x8D44;&#x91D1;&#x5BC6;&#x7801;
-        await brokerService(&apos;zhongtai&apos;, &apos;login&apos;, {
-            path: `E:\\\xiadan\\xiadan.exe`,
-            account: &apos;&#x8D44;&#x91D1;&#x8D26;&#x53F7;&apos;,
-            password: &apos;&#x8D44;&#x91D1;&#x5BC6;&#x7801;&apos;
-        })
-    }
-})
+<p>&#x5728;zt-trade/user.json&#x4E0B;&#x66FF;&#x6362;&#x76F8;&#x5173;&#x4FE1;&#x606F;</p>
+<pre><code>{
+    &quot;path&quot;: &quot;E:\\\\xxxxxx\\xiadan.exe&quot;,
+    &quot;account&quot;: &quot;zt-trade&#x8D26;&#x53F7;&quot;,
+    &quot;password&quot;: &quot;zt-trade&#x5BC6;&#x7801;&quot;,
+    &quot;brokerAccount&quot;: &quot;&#x5238;&#x5546;&#x8D44;&#x91D1;&#x8D26;&#x53F7;&quot;,
+    &quot;brokerPassword&quot;: &quot;&#x5238;&#x5546;&#x8D44;&#x91D1;&#x5BC6;&#x7801;&quot;
+}
 </code></pre><h5 id="2-&#x542F;&#x52A8;&#x672C;&#x5730;&#x63A5;&#x53E3;&#x670D;&#x52A1;">2. &#x542F;&#x52A8;&#x672C;&#x5730;&#x63A5;&#x53E3;&#x670D;&#x52A1;</h5>
-<p>cd zt-trade &amp;&amp; node server.js &#x542F;&#x52A8;&#x672C;&#x5730;&#x63A5;&#x53E3;server</p>
-
+<pre><code>cd zt-trade &amp;&amp; node server.js &#x542F;&#x52A8;&#x672C;&#x5730;&#x63A5;&#x53E3;server
+</code></pre>
                                 
                                 </section>
                             
@@ -415,7 +297,7 @@ brokerService(&apos;zhongtai&apos;, &apos;init&apos;, null, async (res) =&gt; {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"\b资金账号配置","level":"1.2.2","depth":2,"next":{"title":"交易API","level":"1.2.3","depth":2,"path":"Account/test_api.md","ref":"Account/test_api.md","articles":[]},"previous":{"title":"安装","level":"1.2.1","depth":2,"path":"Install/Index.md","ref":"Install/Index.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zt-trade","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"zt-trade","language":"zh-hans","gitbook":"3.2.3","description":"select * from learn"},"file":{"path":"Account/config.md","mtime":"2019-09-18T15:13:24.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-18T15:14:06.038Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"\b资金账号配置","level":"1.2.2","depth":2,"next":{"title":"交易API","level":"1.2.3","depth":2,"path":"Account/test_api.md","ref":"Account/test_api.md","articles":[]},"previous":{"title":"安装","level":"1.2.1","depth":2,"path":"Install/Index.md","ref":"Install/Index.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zt-trade","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"zt-trade","language":"zh-hans","gitbook":"3.2.3","description":"select * from learn"},"file":{"path":"Account/config.md","mtime":"2019-09-19T15:35:15.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-19T15:24:02.548Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
