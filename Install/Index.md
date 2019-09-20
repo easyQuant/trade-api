@@ -2,7 +2,7 @@
 #### 环境要求
 支持系统    windows
 
-python版本  3.6 3.7
+python版本  3.7 // 无需单独安装 程序包内已带
 
 node版本    8+
 
@@ -22,16 +22,14 @@ http://120.77.176.54:8000/zt-trade.zip
 unzip zt-trade.zip && cd zt-trade
 ```
 
-##### 4. 安装 node 和 python 依赖
+##### 4. 安装 node 依赖
 
 ```
 npm install -ddd
-pip install -r requirements.txt
 ```
 
 安装速度慢的话可以使用以下方案加速
 
 ```
 npm --registry https://registry.npm.taobao.org install -ddd ## 临时使用淘宝源
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt ## 临时使用国内源
 ```
