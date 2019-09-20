@@ -4,9 +4,24 @@
 
 python版本  3.7 无需单独安装 程序包内已带
 
-node版本    8+
+nodejs版本    8+
 
 #### 配置环境
+
+#### 安装前的准备
+
+##### 下载cmder [windows下命令行工具]
+
+https://cmder.net/ 选择完整版
+
+##### 安装nodejs
+
+https://nodejs.org/en/
+
+##### <font color=#FF0000 >所有路径不要有中文</font>
+
+
+#### 准备安装
 
 ##### 1. 下载券商客户端
 
@@ -16,15 +31,21 @@ http://download.95538.cn/download/software/hx/ths_order.exe
 
 http://120.77.176.54:8000/zt-trade.zip
 
-https://pan.baidu.com/s/1qXNnGpoP51nLbOFLUmL24Q 百度网盘
+https://pan.baidu.com/s/1Mo1P-SD1jDjJjF_MUmXZJQ 百度网盘
 
-##### 3. 解压zt-trade.zip并进入安装包目录
+##### 3. 使用命令行或者winrar解压zt-trade.zip
 
 ```
-unzip zt-trade.zip && cd zt-trade
+unzip zt-trade.zip
 ```
 
-##### 4. 安装 node 依赖
+##### 4. 进入zt-trade
+
+```
+cd zt-trade
+```
+
+##### 5 安装 node 依赖
 
 ```
 npm install -ddd

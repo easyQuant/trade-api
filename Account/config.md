@@ -10,16 +10,10 @@ zt-trade账号相关可以加qq群 273896202 咨询
 
 ```
 {
-    "path": "E:\\\\xxxxxx\\xiadan.exe",
+    "path": "替换券商客户端的路径", // 例如: E:\\\\zt\\xiadan.exe 不要有中文
     "account": "zt-trade账号",
     "password": "zt-trade密码",
     "brokerAccount": "券商资金账号",
     "brokerPassword": "券商资金密码"
 }
-```
-
-##### 2. 启动本地接口服务
-
-```
-cd zt-trade && node server.js 启动本地接口server
 ```
