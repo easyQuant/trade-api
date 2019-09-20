@@ -16,6 +16,8 @@ http://download.95538.cn/download/software/hx/ths_order.exe
 
 http://120.77.176.54:8000/zt-trade.zip
 
+https://pan.baidu.com/s/1qXNnGpoP51nLbOFLUmL24Q // 百度网盘
+
 ##### 3. 解压zt-trade.zip并进入安装包目录
 
 ```
