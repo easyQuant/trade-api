@@ -20,7 +20,6 @@ https://nodejs.org/en/
 
 ##### <font color=#FF0000 >所有路径不要有中文</font>
 
-
 #### 准备安装
 
 ##### 1. 下载券商客户端
@@ -33,19 +32,23 @@ http://120.77.176.54:8000/zt-trade.zip
 
 https://pan.baidu.com/s/1Mo1P-SD1jDjJjF_MUmXZJQ 百度网盘
 
-##### 3. 使用命令行或者winrar解压zt-trade.zip
+##### 3. 安装tesseract
+
+http://120.77.176.54:4000/Install/tesseract.html
+
+##### 4. 使用命令行或者winrar解压zt-trade.zip
 
 ```
 unzip zt-trade.zip
 ```
 
-##### 4. 进入zt-trade
+##### 5. 进入zt-trade
 
 ```
 cd zt-trade
 ```
 
-##### 5 安装 node 依赖
+##### 6 安装 node 依赖
 
 ```
 npm install -ddd
