@@ -10,5 +10,6 @@
     * [安全性](Account/safety.md)
     * [支持券商](Broker/index.md)
         * [中泰证券](Broker/zhongtai.md)
+    * [支持量化平台](Quant/joinquant.md)
 
 

@@ -6,7 +6,7 @@
 import requests
 
 ## 在策略代码顶端添加本地server地址
-REAL_URL = 'http:##127.0.0.1:3001'
+REAL_URL = 'http://127.0.0.1:3001'
 ```
 
 #### 获取持仓信息
