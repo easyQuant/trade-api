@@ -10,7 +10,7 @@ zt-trade账号相关可以加qq群 273896202 咨询
 
 ```
 {
-    "path": "替换券商客户端的路径", // 例如: E:\\\\zt\\xiadan.exe 不要有中文
+    "path": "替换券商客户端的路径", // 例如: E:/zt/xiadan.exe 不要有中文
     "account": "zt-trade账号",
     "password": "zt-trade密码",
     "brokerAccount": "券商资金账号",
