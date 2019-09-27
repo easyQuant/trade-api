@@ -216,16 +216,35 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.8" data-path="../Quant/joinquant-client.html">
+        <li class="chapter " data-level="1.2.8" data-path="../Quant/">
             
-                <a href="../Quant/joinquant-client.html">
+                <a href="../Quant/">
             
                     
-                    支持的平台
+                    主流量化平台对接
             
                 </a>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.8.1" data-path="../Quant/joinquant-local.html">
+            
+                <a href="../Quant/joinquant-local.html">
+            
+                    
+                    Joinquant
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -284,6 +303,30 @@
 <pre><code>cd zt-trade &amp;&amp; node server.js &#x542F;&#x52A8;&#x672C;&#x5730;&#x63A5;&#x53E3;server
 </code></pre><h5 id="2-&#x767B;&#x5F55;&#x6210;&#x529F;&#x540E;-&#x542F;&#x52A8;&#x6D4F;&#x89C8;&#x5668;-&#x6D4B;&#x8BD5;&#x63A5;&#x53E3;">2. &#x767B;&#x5F55;&#x6210;&#x529F;&#x540E; &#x542F;&#x52A8;&#x6D4F;&#x89C8;&#x5668; &#x6D4B;&#x8BD5;&#x63A5;&#x53E3;</h5>
 <pre><code>http://127.0.0.1:3001/api/position &#x5730;&#x5740;&#x680F;&#x8F93;&#x5165;
+</code></pre><h5 id="3-&#x7B80;&#x5355;&#x4F46;&#x662F;&#x5B8C;&#x6574;&#x7684;&#x7B56;&#x7565;">3. &#x7B80;&#x5355;&#x4F46;&#x662F;&#x5B8C;&#x6574;&#x7684;&#x7B56;&#x7565;</h5>
+<pre><code>import requests
+
+## &#x5728;&#x7B56;&#x7565;&#x4EE3;&#x7801;&#x9876;&#x7AEF;&#x6DFB;&#x52A0;&#x672C;&#x5730;server&#x5730;&#x5740;
+REAL_URL = &quot;http://127.0.0.1:3001&quot;
+
+## &#x83B7;&#x53D6;&#x6301;&#x4ED3;
+handle_position ():
+    return requests.get(REAL_URL + &quot;/api/position&quot;).json()
+
+## &#x4E0B;&#x9650;&#x4EF7;&#x4E70;&#x5355;
+handle_buy ():
+    r = requests.get(REAL_URL + &quot;/api/buy&quot;, params = {
+        &quot;stock&quot;: &quot;000001&quot;,
+        &quot;price&quot;: 16.00,
+        &quot;amount&quot;: 100
+    }).json()
+
+position = handle_position()
+cash = position[&apos;portfolio&apos;][&apos;available_cash&apos;]
+
+## &#x5982;&#x679C;&#x53EF;&#x7528;&#x8D44;&#x91D1;&#x5927;&#x4E8E;0 &#x4E70;&#x5165;&#x4E00;&#x624B;&#x5E73;&#x5B89;&#x94F6;&#x884C;
+if cash &gt; 0:
+    handle_buy()
 </code></pre>
                                 
                                 </section>
@@ -327,7 +370,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"运行","level":"1.2.4","depth":2,"next":{"title":"交易API","level":"1.2.5","depth":2,"path":"Account/test_api.md","ref":"Account/test_api.md","articles":[]},"previous":{"title":"\b资金账号配置","level":"1.2.3","depth":2,"path":"Account/config.md","ref":"Account/config.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zt-trade","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"zt-trade","language":"zh-hans","gitbook":"3.2.3","description":"select * from learn"},"file":{"path":"Account/run.md","mtime":"2019-09-20T14:58:18.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-27T09:24:19.410Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"运行","level":"1.2.4","depth":2,"next":{"title":"交易API","level":"1.2.5","depth":2,"path":"Account/test_api.md","ref":"Account/test_api.md","articles":[]},"previous":{"title":"\b资金账号配置","level":"1.2.3","depth":2,"path":"Account/config.md","ref":"Account/config.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zt-trade","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"zt-trade","language":"zh-hans","gitbook":"3.2.3","description":"select * from learn"},"file":{"path":"Account/run.md","mtime":"2019-09-27T10:14:49.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-27T13:41:26.529Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
