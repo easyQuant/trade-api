@@ -39,7 +39,7 @@ def initialize(context):
 
     ### 实盘相关配置 ###
     # 初始化实盘跟单函数
-    init(g, context, order, order_target, order_value, order_target_value, get_open_orders, cancel_order, False)
+    init(g, context, order, order_target, order_value, order_target_value, get_open_orders, cancel_order, LimitOrderStyle, False)
     g.current_data = get_current_data()
     
 ## 开盘前运行函数     
@@ -61,9 +61,9 @@ def handle_data(context, data):
         # 如果持有该股票同时可卖数量大于0则卖出
         if security in context.portfolio.positions and context.portfolio.positions[security].closeable_amount > 0:
 
-            # 下卖出单 卖出100股
+            # 下限价卖出单 卖出100股
             log.info(' # 下卖单 市价卖出100股 ')
-            g.order(security, -100, 'LimitOrder', price)
+            g.order(security, -100, g.LimitOrderStyle(price))
 
             # 记录这次买入
             log.info("Selling %s" % (security))
@@ -71,9 +71,9 @@ def handle_data(context, data):
         # 否则有现金余额则买入
         elif cash > 0:
 
-            # 下买单 买入100股
-            log.info(' # 下买单 市价买入100股 ')
-            g.order(security, 100)
+            # 下市价买单 买入600的价值
+            log.info(' # 下买单 市价买入600价值的股票 ')
+            g.order_value(security, 600)
 
             # 记录这次买入
             log.info("Buying %s" % (security))
