@@ -21,6 +21,9 @@ from real_api import *
 
 
 ```
+每次调用 context.portfolio 之前调用 获取最新持仓
+g.get_current_total_value(g, context)  
+
 ## Context对象, 存放有当前的账户/股票持仓信息
 context => g.context
 

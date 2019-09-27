@@ -6,14 +6,14 @@
 import requests
 
 ## 在策略代码顶端添加本地server地址
-REAL_URL = 'http://127.0.0.1:3001'
+REAL_URL = "http://127.0.0.1:3001"
 ```
 
 #### 获取持仓信息
 
 ##### 请求方式
 ```
-r = requests.get(REAL_URL + '/api/position')
+r = requests.get(REAL_URL + "/api/position")
 ```
 
 ##### 返回数据示例
@@ -93,16 +93,16 @@ r = requests.get(REAL_URL + '/api/position')
 
 ##### 请求方式
 ```
-r = requests.get(REAL_URL + '/api/buy', param = {
+r = requests.get(REAL_URL + "/api/buy", params = {
 
     ## 股票代码
-    stock: '002503',
+    "stock": "002503",
 
     ## 要下单的价格
-    price: 2.62,
+    "price": 2.62,
 
     ## 下单数量
-    amount: 100
+    "amount": 100
 })
 ```
 
@@ -120,16 +120,16 @@ r = requests.get(REAL_URL + '/api/buy', param = {
 
 ##### 请求方式
 ```
-r = requests.get(REAL_URL + '/api/sell', param = {
+r = requests.get(REAL_URL + "/api/sell", params = {
 
     ## 股票代码
-    stock: '002503',
+    "stock": "002503",
 
     ## 要下单的价格
-    price: 2.62,
+    "price": 2.62,
 
     ## 下单数量
-    amount: 100
+    "amount": 100
 })
 ```
 
@@ -146,16 +146,16 @@ r = requests.get(REAL_URL + '/api/sell', param = {
 
 ##### 请求方式
 ```
-r = requests.get(REAL_URL + '/api/market_buy', param = {
+r = requests.get(REAL_URL + "/api/market_buy", params = {
 
     ## 股票代码
-    stock: '002503',
+    "stock": "002503",
 
     ## 当前价格
-    price: 2.62,
+    "price": 2.62,
 
     ## 下单数量
-    amount: 100
+    "amount": 100
 })
 ```
 
@@ -164,7 +164,7 @@ r = requests.get(REAL_URL + '/api/market_buy', param = {
 ```
 {   
     ## 合同编号
-    entrust_no: '100'
+    "entrust_no": 100
 }
 ```
 
@@ -172,16 +172,16 @@ r = requests.get(REAL_URL + '/api/market_buy', param = {
 
 ##### 请求方式
 ```
-r = requests.get(REAL_URL + '/api/market_sell', param = {
+r = requests.get(REAL_URL + "/api/market_sell", params = {
     
     ## 股票代码
-    stock: '002503',
+    "stock": "002503",
 
     ## 当前价格
-    price: 2.62,
+    "price": 2.62,
 
     ## 下单数量
-    amount: 100
+    "amount": 100
 })
 ```
 
@@ -191,7 +191,7 @@ r = requests.get(REAL_URL + '/api/market_sell', param = {
 ## 委托成功
 {
     ## 合同编号
-    entrust_no: '100'
+    "entrust_no": "100"
 }
 ```
 
@@ -199,10 +199,10 @@ r = requests.get(REAL_URL + '/api/market_sell', param = {
 
 ##### 请求方式
 ```
-r = requests.get(REAL_URL + '/api/cancel_entrust', param = {
+r = requests.get(REAL_URL + "/api/cancel_entrust", params = {
 
     ## 合同编号
-    entrust_no: '100'
+    "entrust_no": "100"
 })
 ```
 
@@ -219,7 +219,7 @@ r = requests.get(REAL_URL + '/api/cancel_entrust', param = {
 
 ##### 请求方式
 ```
-r = requests.get(REAL_URL + '/api/today_entrusts')
+r = requests.get(REAL_URL + "/api/today_entrusts")
 ```
 
 ##### 请求返回
@@ -264,7 +264,7 @@ r = requests.get(REAL_URL + '/api/today_entrusts')
 
 ##### 请求方式
 ```
-r = requests.get(REAL_URL + '/api/today_trades')
+r = requests.get(REAL_URL + "/api/today_trades")
 ```
 
 ##### 请求返回
@@ -302,7 +302,7 @@ r = requests.get(REAL_URL + '/api/today_trades')
 
 ##### 请求方式
 ```
-r = requests.get(REAL_URL + '/api/cancel_entrusts')
+r = requests.get(REAL_URL + "/api/cancel_entrusts")
 ```
 
 ##### 请求返回
