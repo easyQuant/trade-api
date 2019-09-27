@@ -17,17 +17,14 @@ from real_zt_api import *
 
 # 初始化函数，设定基准等等
 def initialize(context):
-
     # 设置我们要操作的股票
     g.stock = '601398.XSHG'
-
     ### 实盘相关配置 ###
     # 初始化实盘跟单函数
     init(g, context, order, order_target, order_value, order_target_value, get_open_orders, cancel_order, LimitOrderStyle, False)
     g.current_data = get_current_data()
     
 def handle_data(context, data):
-
     ## 获取实盘持仓信息
     g.get_current_total_value(g, context)
 
