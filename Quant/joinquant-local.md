@@ -37,3 +37,9 @@ def handle_data(context, data):
         g.order(g.stock, -100)
 
 ```
+
+##### 4. 实盘和模拟盘函数的编写差异
+
+```
+
+```
