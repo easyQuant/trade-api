@@ -1,4 +1,4 @@
-# Joinquant
+<!-- # Joinquant
 
 #### 对接聚宽量化终端
 
@@ -27,26 +27,44 @@ g.get_current_total_value(g, context)
 ## Context对象, 存放有当前的账户/股票持仓信息
 context => g.context
 
-## 按数量买入
+## 按数量买入[市价]
 order(stock, amount) => g.order(stock, amount)
 
-## 按价值买入
+## 按数量买入[限价]
+order(stock, amount, LimitOrderStyle(price)) => g.order(stock, amount, g.LimitOrderStyle(price))
+
+## 按价值买入[市价]
 order_value(stock, value) => g.order_value(stock, value)
 
-## 交易到指定数量
+## 按价值买入[限价] 
+order_value(stock, value, LimitOrderStyle(price)) => g.order_value(stock, value, g.LimitOrderStyle(price))
+
+## 交易到指定数量[市价]
 order_target(stock, amount) => g.order_target(stock, amount)
 
-## 交易到指定价值
+## 交易到指定数量[限价]
+order_target(stock, amount, LimitOrderStyle(price)) => g.order_target(stock, amount, g.LimitOrderStyle(price))
+
+## 交易到指定价值[市价]
 order_target_value(stock, value) => g.order_target_value(stock, value)
+
+## 交易到指定价值[限价]
+order_target_value(stock, value, LimitOrderStyle(price)) => g.order_target_value(stock, value, g.LimitOrderStyle(price))
 
 ## 根据委托单号撤单
 cancel_order(order_id) => g.cancel_order(order_id)
 
-## 获取未成交委托列表
-get_open_orders => g.get_open_orders
+## 获取未完成订单
+get_open_orders() => g.real_get_open_orders(g, context)
+
+## 获取订单信息
+get_orders() => g.real_get_orders(g, context)
+
+## 获取成交信息
+get_trades() => g.real_get_trades(g, context)
 ```
 
 ##### 5. 正常执行回测
 
 ##### 6. 使用刚刚创建的回测 创建本地模拟盘
-
+ -->
