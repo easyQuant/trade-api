@@ -40,16 +40,31 @@ def handle_data(context, data):
 
 ```
 
-#### 4. 实盘和模拟盘函数的编写差异
+#### 4. 实盘函数初始化以及注意事项
 
-实盘函数和聚宽的模拟盘函数基本一致 改造后的函数可以同时兼容在本地进行回测和本地实盘
+##### 1. 需要在 initialize 函数内执行init函数和g.current_data的赋值
+```
+def initialize(context):
 
-##### 左边是原本的模拟函数 右边是实盘函数
+    # 初始化实盘跟单函数
+    # 前面的参数都是用来兼容策略回测的
+    # 最后一个参数判断实盘时的 order_target和order_target_value 函数执行之前是否撤掉已挂的委托单
+    # 默认不进行撤单操作
+    init(g, context, order, order_target, order_value, order_target_value, get_open_orders, cancel_order, LimitOrderStyle, False)
+    g.current_data = get_current_data()
+```
+
+##### 2. 每次调用 context.portfolio 之前需要调用接口 获取最新持仓
+```
+# 每次调用 context.portfolio 之前调用 获取最新持仓
+g.get_current_total_value(g, context)  
+```
+
+#### 5. 实盘和模拟盘函数的编写差异
+
+##### 为了同时兼容回测和实盘执行 做了一些函数改动
 
 ```
-每次调用 context.portfolio 之前调用 获取最新持仓
-g.get_current_total_value(g, context)  
-
 ## Context对象, 存放有当前的账户/股票持仓信息
 context => g.context
 
