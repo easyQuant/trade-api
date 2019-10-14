@@ -33,7 +33,7 @@ http://download.95538.cn/download/software/hx/ths_order.exe
 
 http://120.77.176.54:8000/zt-trade.zip
 
-https://pan.baidu.com/s/1lO08o90fi8ktHPzvEGw8Ew 百度网盘
+https://pan.baidu.com/s/1ID-XXf4K3XPOg54ndROTcw 百度网盘
 
 ##### 3. 安装tesseract
 
