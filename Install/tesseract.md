@@ -1,14 +1,10 @@
 # 安装tesseract
 
-tesseract是一个开源ocr引擎 用来自动登录时处理验证码
+tesseract是一个开源ocr引擎 用来自动登录时处理验证码 
 
-#### 1. 下载windows版 tesseract
+免安装版已包含 只需要参考以下流程手动配置下环境变量
 
-https://github.com/tesseract-ocr/tesseract 官网速度较慢
-
-https://pan.baidu.com/s/1t_lD76fYIWWOZSopGkVLAQ 百度网盘
-
-#### 2. 配置环境变量
+#### 配置环境变量
 
 ##### 1. 我的电脑 - 控制面板
 ![PNG](../images/server1.png)
@@ -28,7 +24,8 @@ https://pan.baidu.com/s/1t_lD76fYIWWOZSopGkVLAQ 百度网盘
 ##### 6. 系统变量 - Path - 编辑
 ![PNG](../images/server6.png)
 
-##### 7. 新建 输入tesseract-ocr的安装目录 点击确定 
+##### 7. 新建 输入解压 zt-trade/tesseract-ocr 的安装目录 点击确定 
+##### 安装目录示例 d:\zt-trade\tesseract-ocr
 ![PNG](../images/server7.png)
 
 ##### 8. 重启cmder 命令行输入 tesseract -v 如果正常显示版本信息则说明 tesseract 配置成功了

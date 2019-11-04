@@ -2,12 +2,12 @@
 
 ##### 1. 启动本地接口服务
 
-```
-cd zt-trade && node server.js 启动本地接口server
-```
+双击 安装目录/zt-trade/zt-trade-view.exe
 
-##### 2. 登录成功后 启动浏览器 测试接口
+zt-trade 相关账号加qq群 273896202 获取
+
+##### 2. 登录成功后 启动浏览器 测试 持仓接口
 
 ```
-http://127.0.0.1:3001/api/position 地址栏输入
+http://127.0.0.1:3001/api/position 浏览器地址栏输入
 ```
