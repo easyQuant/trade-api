@@ -10,7 +10,7 @@ http://download.95538.cn/download/software/hx/ths_order.exe
 
 https://pan.baidu.com/s/1zpK-b3t2O4KrfUJtNICDsQ 百度网盘
 
-##### 4. 使用前配置tesseract环境变量配置 参考以下文档
+##### 3. 使用前配置tesseract环境变量配置 参考以下文档
 
 http://120.77.176.54:4000/Install/tesseract.html
 
