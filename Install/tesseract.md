@@ -24,7 +24,7 @@ tesseract是一个开源ocr引擎 用来自动登录时处理验证码
 ##### 6. 系统变量 - Path - 编辑
 ![PNG](../images/server6.png)
 
-##### 7. 新建 输入解压 zt-trade/tesseract-ocr 的安装目录 点击确定 
+##### 7. 点击新建  输入zt-trade的安装目录 点击确定 
 ##### 安装目录示例 d:\zt-trade\tesseract-ocr
 ![PNG](../images/server7.png)
 
