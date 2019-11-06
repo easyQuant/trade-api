@@ -8,7 +8,7 @@ http://download.95538.cn/download/software/hx/ths_order.exe
 
 ##### 2. 下载zt-trade
 
-https://pan.baidu.com/s/1zpK-b3t2O4KrfUJtNICDsQ 百度网盘
+https://pan.baidu.com/s/1UsjhAdM8O7z3P99pU2oBMw 百度网盘
 
 ##### 3. 使用前配置tesseract环境变量配置 参考以下文档
 
