@@ -25,8 +25,7 @@ def initialize(context):
     g.stock = '601398.XSHG'
     ### 实盘相关配置 ###
     # 初始化实盘跟单函数
-    init(g, context, order, order_target, order_value, order_target_value, 
-    get_open_orders, cancel_order, LimitOrderStyle, False)
+    init(g, context, order, order_target, order_value, order_target_value, get_orders, get_open_orders, get_trades, cancel_order, LimitOrderStyle, False)
     g.current_data = get_current_data()
     
 def handle_data(context, data):
