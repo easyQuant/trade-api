@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>交易API · zt-trade</title>
+        <title>查询 · zt-trade</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -47,10 +47,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../Broker/order.html" />
+    <link rel="next" href="../Account/safety.html" />
     
     
-    <link rel="prev" href="run.html" />
+    <link rel="prev" href="order.html" />
     
 
     </head>
@@ -132,9 +132,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="run.html">
+        <li class="chapter " data-level="1.2.3" data-path="../Account/run.html">
             
-                <a href="run.html">
+                <a href="../Account/run.html">
             
                     
                     运行
@@ -145,9 +145,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.4" data-path="test_api.html">
+        <li class="chapter " data-level="1.2.4" data-path="../Account/test_api.html">
             
-                <a href="test_api.html">
+                <a href="../Account/test_api.html">
             
                     
                     交易API
@@ -159,9 +159,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.4.1" data-path="../Broker/order.html">
+        <li class="chapter " data-level="1.2.4.1" data-path="order.html">
             
-                <a href="../Broker/order.html">
+                <a href="order.html">
             
                     
                     下单
@@ -172,9 +172,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4.2" data-path="../Broker/query.html">
+        <li class="chapter active" data-level="1.2.4.2" data-path="query.html">
             
-                <a href="../Broker/query.html">
+                <a href="query.html">
             
                     
                     查询
@@ -190,9 +190,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5" data-path="safety.html">
+        <li class="chapter " data-level="1.2.5" data-path="../Account/safety.html">
             
-                <a href="safety.html">
+                <a href="../Account/safety.html">
             
                     
                     安全性
@@ -203,9 +203,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.6" data-path="../Broker/">
+        <li class="chapter " data-level="1.2.6" data-path="./">
             
-                <a href="../Broker/">
+                <a href="./">
             
                     
                     支持券商
@@ -217,9 +217,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.6.1" data-path="../Broker/zhongtai.html">
+        <li class="chapter " data-level="1.2.6.1" data-path="zhongtai.html">
             
-                <a href="../Broker/zhongtai.html">
+                <a href="zhongtai.html">
             
                     
                     中泰证券
@@ -302,7 +302,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >交易API</a>
+        <a href=".." >查询</a>
     </h1>
 </div>
 
@@ -317,13 +317,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x4EA4;&#x6613;api">&#x4EA4;&#x6613;API</h1>
-<h4 id="&#x5728;python&#x4EE3;&#x7801;&#x4E2D;&#x8C03;&#x7528;&#x672C;&#x5730;http-api-&#x5B9E;&#x73B0;&#x5B9E;&#x76D8;">&#x5728;python&#x4EE3;&#x7801;&#x4E2D;&#x8C03;&#x7528;&#x672C;&#x5730;http api &#x5B9E;&#x73B0;&#x5B9E;&#x76D8;</h4>
-<pre><code>import requests
-
-## &#x5728;&#x7B56;&#x7565;&#x4EE3;&#x7801;&#x9876;&#x7AEF;&#x6DFB;&#x52A0;&#x672C;&#x5730;server&#x5730;&#x5740;
-REAL_URL = &quot;http://127.0.0.1:3001&quot;
-</code></pre><h4 id="&#x83B7;&#x53D6;&#x6301;&#x4ED3;&#x4FE1;&#x606F;">&#x83B7;&#x53D6;&#x6301;&#x4ED3;&#x4FE1;&#x606F;</h4>
+                                <h1 id="&#x67E5;&#x8BE2;">&#x67E5;&#x8BE2;</h1>
+<h4 id="&#x83B7;&#x53D6;&#x6301;&#x4ED3;&#x4FE1;&#x606F;">&#x83B7;&#x53D6;&#x6301;&#x4ED3;&#x4FE1;&#x606F;</h4>
 <h5 id="&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;">&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</h5>
 <pre><code>r = requests.get(REAL_URL + &quot;/api/position&quot;)
 </code></pre><h5 id="&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x793A;&#x4F8B;">&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x793A;&#x4F8B;</h5>
@@ -395,6 +390,108 @@ REAL_URL = &quot;http://127.0.0.1:3001&quot;
     }
 
 }
+</code></pre><h4 id="&#x5F53;&#x65E5;&#x59D4;&#x6258;&#x5217;&#x8868;">&#x5F53;&#x65E5;&#x59D4;&#x6258;&#x5217;&#x8868;</h4>
+<h5 id="&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;">&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</h5>
+<pre><code>r = requests.get(REAL_URL + &quot;/api/today_entrusts&quot;)
+</code></pre><h5 id="&#x8BF7;&#x6C42;&#x8FD4;&#x56DE;">&#x8BF7;&#x6C42;&#x8FD4;&#x56DE;</h5>
+<pre><code>[
+    {
+        ## &#x5408;&#x540C;&#x7F16;&#x53F7;
+        &quot;entrust_no&quot;: &quot;827&quot;,
+
+        ## &#x6807;&#x7684;&#x4EE3;&#x7801;
+        &quot;security&quot;: &quot;002503&quot;,
+
+        ## &#x6807;&#x7684;&#x540D;&#x79F0;
+        &quot;security_name&quot;: &quot;&#x641C;&#x4E8E;&#x7279;&quot;,
+
+        ## &#x59D4;&#x6258;&#x7C7B;&#x578B;
+        &quot;order_type&quot;: &quot;&#x8BC1;&#x5238;&#x5356;&#x51FA;&quot;,
+
+        ## &#x6210;&#x4EA4;&#x72B6;&#x6001;
+        &quot;state&quot;: &quot;&#x672A;&#x62A5;&quot;,
+
+        ## &#x59D4;&#x6258;&#x4EF7;&#x683C;
+        &quot;order_price&quot;: 2.7,
+
+        ## &#x59D4;&#x6258;&#x65F6;&#x95F4;
+        &quot;order_date&quot;: &quot;21:08:45&quot;,
+
+        ## &#x59D4;&#x6258;&#x6570;&#x91CF;
+        &quot;transaction_amount&quot;: 100,
+
+        ## &#x59D4;&#x6258;&#x91D1;&#x989D;
+        &quot;transaction_value&quot;: 270,
+
+        ## &#x59D4;&#x6258;&#x4EF7;&#x683C;
+        &quot;transaction_price&quot;: 2.7
+    }
+]
+</code></pre><h4 id="&#x5F53;&#x65E5;&#x6210;&#x4EA4;&#x5217;&#x8868;">&#x5F53;&#x65E5;&#x6210;&#x4EA4;&#x5217;&#x8868;</h4>
+<h5 id="&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;">&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</h5>
+<pre><code>r = requests.get(REAL_URL + &quot;/api/today_trades&quot;)
+</code></pre><h5 id="&#x8BF7;&#x6C42;&#x8FD4;&#x56DE;">&#x8BF7;&#x6C42;&#x8FD4;&#x56DE;</h5>
+<pre><code>[
+    {
+        ## &#x5408;&#x540C;&#x7F16;&#x53F7;
+        entrust_no: &quot;827&quot;,
+
+        ## &#x6807;&#x7684;&#x4EE3;&#x7801;
+        security: &quot;002503&quot;,
+
+        ## &#x6807;&#x7684;&#x540D;&#x79F0;
+        security_name: &quot;&#x641C;&#x4E8E;&#x7279;&quot;,
+
+        ## &#x6210;&#x4EA4;&#x7C7B;&#x578B;
+        trade_type: &quot;&#x8BC1;&#x5238;&#x5356;&#x51FA;&quot;,
+
+        ## &#x6210;&#x4EA4;&#x65F6;&#x95F4;
+        trade_date: &quot;21:08:45&quot;,
+
+        ## &#x6210;&#x4EA4;&#x5747;&#x4EF7;
+        transaction_price: &quot;2.7&quot;,
+
+        ## &#x6210;&#x4EA4;&#x6570;&#x91CF;
+        transaction_amount: &quot;100&quot;,
+
+        ## &#x6210;&#x4EA4;&#x91D1;&#x989D;
+        transaction_value: 270
+    }
+]
+</code></pre><h4 id="&#x5F53;&#x65E5;&#x64A4;&#x5355;&#x5217;&#x8868;">&#x5F53;&#x65E5;&#x64A4;&#x5355;&#x5217;&#x8868;</h4>
+<h5 id="&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;">&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</h5>
+<pre><code>r = requests.get(REAL_URL + &quot;/api/cancel_entrusts&quot;)
+</code></pre><h5 id="&#x8BF7;&#x6C42;&#x8FD4;&#x56DE;">&#x8BF7;&#x6C42;&#x8FD4;&#x56DE;</h5>
+<pre><code>[
+    {
+        ## &#x5408;&#x540C;&#x7F16;&#x53F7;
+        &quot;entrust_no&quot;: &quot;827&quot;,
+
+        ## &#x6807;&#x7684;&#x4EE3;&#x7801;
+        &quot;security&quot;: &quot;002503&quot;,
+
+        ## &#x6807;&#x7684;&#x540D;&#x79F0;
+        &quot;security_name&quot;: &quot;&#x641C;&#x4E8E;&#x7279;&quot;,
+
+        ## &#x59D4;&#x6258;&#x7C7B;&#x578B;
+        &quot;order_type&quot;: &quot;&#x8BC1;&#x5238;&#x5356;&#x51FA;&quot;,
+
+        ## &#x59D4;&#x6258;&#x72B6;&#x6001;
+        &quot;state&quot;: &quot;&#x672A;&#x62A5;&quot;,
+
+        ## &#x64A4;&#x5355;&#x65E5;&#x671F;
+        &quot;trade_date&quot;: 20190923,
+
+        ## &#x59D4;&#x6258;&#x4EF7;&#x683C;
+        &quot;transaction_price&quot;: 2.7,
+
+        ## &#x59D4;&#x6258;&#x6570;&#x91CF;
+        &quot;transaction_amount&quot;: 100,
+
+        ## &#x59D4;&#x6258;&#x91D1;&#x989D;
+        &quot;transaction_value&quot;: 270
+    }
+]
 </code></pre>
                                 
                                 </section>
@@ -422,12 +519,12 @@ REAL_URL = &quot;http://127.0.0.1:3001&quot;
 
             
                 
-                <a href="run.html" class="navigation navigation-prev " aria-label="Previous page: 运行">
+                <a href="order.html" class="navigation navigation-prev " aria-label="Previous page: 下单">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../Broker/order.html" class="navigation navigation-next " aria-label="Next page: 下单">
+                <a href="../Account/safety.html" class="navigation navigation-next " aria-label="Next page: 安全性">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -438,7 +535,7 @@ REAL_URL = &quot;http://127.0.0.1:3001&quot;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"交易API","level":"1.2.4","depth":2,"next":{"title":"下单","level":"1.2.4.1","depth":3,"path":"Broker/order.md","ref":"Broker/order.md","articles":[]},"previous":{"title":"运行","level":"1.2.3","depth":2,"path":"Account/run.md","ref":"Account/run.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zt-trade","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"zt-trade","language":"zh-hans","gitbook":"3.2.3","description":"select * from learn"},"file":{"path":"Account/test_api.md","mtime":"2019-11-11T11:32:36.491Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-11T11:33:58.070Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"查询","level":"1.2.4.2","depth":3,"next":{"title":"安全性","level":"1.2.5","depth":2,"path":"Account/safety.md","ref":"Account/safety.md","articles":[]},"previous":{"title":"下单","level":"1.2.4.1","depth":3,"path":"Broker/order.md","ref":"Broker/order.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zt-trade","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"zt-trade","language":"zh-hans","gitbook":"3.2.3","description":"select * from learn"},"file":{"path":"Broker/query.md","mtime":"2019-11-11T11:32:28.358Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-11T11:33:58.070Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
